@@ -16,13 +16,31 @@ variable "regions" {
   description = "Region"
   default     = [""]
 }
-variable "perimeter_name" {
-  description = "Region"
+variable "hub_perimeter_name" {
+  description = "Hub Perimeter Name"
   default     = ""
 }
-variable "read_bucket_identities" {
+variable "hub_bucket_identities" {
   type        = list(string)
-  description = "Read Bucket Identities"
+  description = "Hub Bucket Identities"
+  default     = [""]
+}
+variable "spoke_1_perimeter_name" {
+  description = "Spoke 1 Perimeter Name"
+  default     = ""
+}
+variable "spoke_1_bucket_identities" {
+  type        = list(string)
+  description = "Spoke 1 Bucket Identities"
+  default     = [""]
+}
+variable "spoke_2_perimeter_name" {
+  description = "Spoke 2 Perimeter Name"
+  default     = ""
+}
+variable "spoke_2_bucket_identities" {
+  type        = list(string)
+  description = "Spoke 2 Bucket Identities"
   default     = [""]
 }
 variable "buckets_prefix" {
