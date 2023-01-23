@@ -34,12 +34,12 @@ regions = ["GB"]
 
 ## Hub perimeter vars
 hub_perimeter_name = "hub_perimeter"
-hub_bucket_identities = ["user:alexander@candlemakerdirect.co.uk"]
+hub_bucket_identities = ["user:alexander@candlemakerdirect.co.uk","serviceAccount:tf-service-account@prj-hub-3.iam.gserviceaccount.com"]
 
 ## Spoke 1 perimeter vars
 spoke_1_perimeter_name = "spoke_1_perimeter"
-spoke_1_bucket_identities = ["user:alexander@candlemakerdirect.co.uk"]
+spoke_1_bucket_identities = ["user:alexander@candlemakerdirect.co.uk","serviceAccount:tf-service-account@prj-hub-3.iam.gserviceaccount.com"]
 
 ## Spoke 2 perimeter vars
 spoke_2_perimeter_name = "spoke_2_perimeter"
-spoke_2_bucket_identities = ["user:alexander@candlemakerdirect.co.uk"]
+spoke_2_bucket_identities = ["user:alexander@candlemakerdirect.co.uk","serviceAccount:tf-service-account@prj-hub-3.iam.gserviceaccount.com"]

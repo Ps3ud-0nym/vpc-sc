@@ -25,7 +25,7 @@ module "regular_spoke_1_service_perimeter" {
 
   restricted_services_dry_run = ["bigquery.googleapis.com", "storage.googleapis.com"]
 
-  ingress_policies_dry_run = [
+  ingress_policies = [
     {
       "from" = {
         "sources" = {
