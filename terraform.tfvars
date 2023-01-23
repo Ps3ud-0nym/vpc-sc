@@ -29,7 +29,7 @@ bucket_project_id = "prj-hub-3"
 ## VPC SC vars
 policy_name = "org-policy"
 access_level_name = "BasicLevel"
-access_level_members = ["user:alexander@candlemakerdirect.co.uk"]
+access_level_members = ["user:alexander@candlemakerdirect.co.uk","serviceAccount:tf-service-account@prj-hub-3.iam.gserviceaccount.com"]
 regions = ["GB"]
 
 ## Hub perimeter vars

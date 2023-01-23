@@ -21,7 +21,7 @@ module "regular_spoke_1_service_perimeter" {
 
   description           = "Perimeter shielding bigquery project"
   resources_dry_run     = ["297439725161"]
-  access_levels_dry_run = [module.access_level_members.name]
+  access_levels         = [module.access_level_members.name]
 
   restricted_services_dry_run = ["bigquery.googleapis.com", "storage.googleapis.com"]
 
