@@ -20,7 +20,7 @@ module "regular_hub_service_perimeter" {
   perimeter_name = var.hub_perimeter_name
 
   description           = "Perimeter shielding bigquery project"
-  resources_dry_run     = ["971024220329"]
+  resources             = ["971024220329"]
   access_levels         = [module.access_level_members.name]
 
   restricted_services_dry_run = ["bigquery.googleapis.com", "storage.googleapis.com"]

@@ -20,7 +20,7 @@ module "regular_spoke_2_service_perimeter" {
   perimeter_name = var.spoke_2_perimeter_name
 
   description           = "Perimeter shielding bigquery project"
-  resources_dry_run     = ["218900252212"]
+  resources             = ["218900252212"]
   access_levels         = [module.access_level_members.name]
 
   restricted_services_dry_run = ["bigquery.googleapis.com", "storage.googleapis.com"]
