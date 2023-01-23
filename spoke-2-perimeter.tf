@@ -23,7 +23,7 @@ module "regular_spoke_2_service_perimeter" {
   resources             = ["218900252212"]
   access_levels         = [module.access_level_members.name]
 
-  restricted_services_dry_run = ["bigquery.googleapis.com", "storage.googleapis.com"]
+  restricted_services_dry_run = ["storage.googleapis.com"]
 
   ingress_policies = [
     {
@@ -40,8 +40,9 @@ module "regular_spoke_2_service_perimeter" {
         "operations" = {
           "storage.googleapis.com" = {
             "methods" = [
-              "google.storage.objects.get",
-              "google.storage.objects.list"
+              # "google.storage.objects.get",
+              # "google.storage.objects.list"
+              "*"
             ]
           }
         }
