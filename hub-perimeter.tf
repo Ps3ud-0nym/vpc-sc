@@ -23,7 +23,7 @@ module "regular_hub_service_perimeter" {
   resources             = ["971024220329"]
   access_levels         = [module.access_level_members.name]
 
-  restricted_services_dry_run = ["storage.googleapis.com"]
+  restricted_services = ["storage.googleapis.com"]
 
   ingress_policies = [
     {

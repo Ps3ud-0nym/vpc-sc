@@ -23,7 +23,7 @@ module "regular_spoke_1_service_perimeter" {
   resources             = ["297439725161"]
   access_levels         = [module.access_level_members.name]
 
-  restricted_services_dry_run = ["storage.googleapis.com"]
+  restricted_services = ["storage.googleapis.com"]
 
   ingress_policies = [
     {
