@@ -21,7 +21,9 @@ module "regular_spoke_2_service_perimeter" {
 
   description           = "Perimeter shielding bigquery project"
   resources             = ["218900252212"] # Projects protected by the perimeter
-  access_levels         = [module.access_level_members.name] # Additional policy on top of ingress/egress policies
+  access_levels         = [module.access_level_members.name] # Can be specified as an access level in ingress/egress policies
+                                                             # You can specify IP subnetworks, geographic location, device policy, access level dependencies, principals
+                                                             # There is also an advanced mode using CEL
 
   restricted_services = ["storage.googleapis.com"] # Services listed here will be blocked from ingressing/egressing the perimeter
 
@@ -29,7 +31,7 @@ module "regular_spoke_2_service_perimeter" {
     {
       "from" = {
         "sources" = {
-          access_levels = ["*"] # Allow Access from everywhere
+          access_levels = [module.access_level_members.name] # You can specify an access policy, or specific projects here
         },
         "identities" = var.spoke_2_bucket_identities # These identities will be allowed to ingress the perimiter on restricted services
       }

@@ -29,7 +29,7 @@ module "regular_hub_service_perimeter" {
     {
       "from" = {
         "sources" = {
-          access_levels = ["*"] # Allow Access from everywhere
+          access_levels = [module.access_level_members.name] # Allow Access from everywhere
         },
         "identities" = var.hub_bucket_identities
       }

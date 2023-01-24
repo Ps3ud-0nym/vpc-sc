@@ -29,7 +29,7 @@ module "regular_spoke_1_service_perimeter" {
     {
       "from" = {
         "sources" = {
-          access_levels = ["*"] # Allow Access from everywhere
+          access_levels = [module.access_level_members.name] # Allow Access from everywhere
         },
         "identities" = var.spoke_1_bucket_identities
       }
